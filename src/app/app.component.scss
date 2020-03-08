@@ -1,0 +1,159 @@
+$yellow: #FDED01;
+$red: #F60201;
+$blue: #2034D6;
+
+:host {
+  .art {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    border: 10px solid #000000;
+    background: #000000;
+    position: relative;
+    height: 100%;
+
+    button {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFFFFF;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .125), 0 4px 8px rgba(0, 0, 0, .15), 0 8px 16px rgba(0, 0, 0, .175), 0 16px 32px rgba(0, 0, 0, .2);
+      transition: background-color ease 350ms;
+
+      &:hover {
+        background-color: #EEEEEE;
+      }
+
+      &.refresh {
+        bottom: 10px;
+        left: calc(50vw - 25px);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: #333333;
+          transform: rotate(0);
+          transition: all ease 350ms;
+        }
+
+        &:hover {
+          svg {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      &.github {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+
+        svg {
+          fill: #333333;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .box {
+      background: #FFFFFF;
+
+      &:nth-child(2n) {
+        grid-row: span 4;
+      }
+
+      &:nth-child(3n) {
+        grid-column: span 2;
+        grid-row: span 6;
+      }
+
+      &:nth-child(4n) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      &:nth-child(5n) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      &:nth-child(6n) {
+        background: $blue;
+      }
+
+      &:nth-child(7n) {
+        background: $red;
+      }
+
+      &:nth-child(9n) {
+        background: $yellow;
+      }
+
+      &:nth-child(20n) {
+        grid-column: span 4;
+        grid-row: span 1;
+      }
+
+      &:nth-child(21n) {
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      &.num-1 {
+        background: $red;
+        grid-column: span 6;
+        grid-row: span 10;
+      }
+
+      &.num-2 {
+        background: $red;
+      }
+
+      &.num-3 {
+        background: #FFFFFF;
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      &.num-17 {
+        background: $blue;
+      }
+
+      &.num-31 {
+        background: $blue;
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+
+      &.num-32, &.num-33 {
+        background: $yellow;
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      &.num-36, &.num-39 {
+        background: $yellow;
+      }
+
+      &.num-34 {
+        background: #FFFFFF;
+        grid-column: span 4;
+        grid-row: span 4;
+      }
+
+      &.num-35 {
+        background: #FFFFFF;
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+  }
+}
