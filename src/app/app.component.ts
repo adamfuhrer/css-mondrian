@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   }
 
   getRandomBoxOrder(): number {
-    return this.randomNumFromInterval(this.boxes.length);
+    return this.randomNumFromLimit(this.boxes.length);
   }
 
   onButtonClick(): void {
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  randomNumFromInterval(limit): number {
+  randomNumFromLimit(limit): number {
     return Math.floor(Math.random() * limit) + 1;
   }
 }
