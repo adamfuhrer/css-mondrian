@@ -2,6 +2,17 @@ $yellow: #FDED01;
 $red: #F60201;
 $blue: #2034D6;
 
+@keyframes generate {
+  from {
+    opacity: 0.5;
+    transform: scale(.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 :host {
   .art {
     display: grid;
@@ -153,6 +164,14 @@ $blue: #2034D6;
         background: #FFFFFF;
         grid-column: span 2;
         grid-row: span 1;
+      }
+    }
+  }
+
+  &.is-transitioning {
+    .art {
+      .box {
+        animation: generate ease-in 300ms;
       }
     }
   }
