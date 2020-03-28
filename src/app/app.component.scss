@@ -24,7 +24,7 @@ $blue: #2034D6;
     position: relative;
     height: 100%;
 
-    button {
+    button, a {
       position: absolute;
       display: flex;
       align-items: center;
@@ -32,6 +32,7 @@ $blue: #2034D6;
       background-color: #FFFFFF;
       box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .125), 0 4px 8px rgba(0, 0, 0, .15), 0 8px 16px rgba(0, 0, 0, .175), 0 16px 32px rgba(0, 0, 0, .2);
       transition: background-color ease 350ms;
+      z-index: 10;
 
       &:hover {
         background-color: #EEEEEE;
@@ -173,6 +174,12 @@ $blue: #2034D6;
       .box {
         animation: generate ease-in 300ms;
       }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .art {
+      grid-gap: 6px;
     }
   }
 }
