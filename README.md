@@ -4,7 +4,7 @@ Piet Mondrian style art using CSS grid.
 
 Website: [cssmondrian.com](https://cssmondrian.com/)
 
-![css mondrian screenshot](https://cssmondrian.com/assets/css-mondrian-screenshot.png)
+[![css mondrian screenshot](https://cssmondrian.com/assets/css-mondrian-screenshot.png)](https://cssmondrian.com/)
 
 ## Development
 
